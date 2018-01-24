@@ -3,8 +3,8 @@ var mysql = require('mysql');
 let connect = {
     host: "127.0.0.1",
         user: "root",
-        password: "",
-        database: "Project"
+        password: "Project333",
+        database: "DigitalReceipt"
 };
 let name = "";
 

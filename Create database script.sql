@@ -25,7 +25,7 @@ create table Item (
 	id int not null auto_increment primary key,
     name varchar(20),
     description text,
-    dateCreated date,
+    dateCreated datetime default current_timestamp,
     price decimal(20, 2),
     qty int unsigned
 );
@@ -60,7 +60,7 @@ create table Item_Receipt (
 	receiptid int,
     itemid int,
     primary key(receiptid, itemid),
-    foreign key(receiptid) references Receipt(receiptid),
+    foreign key(receiptid) references Ritemeceipt(receiptid),
     foreign key(itemid) references Item(id),
     qty int unsigned
 );

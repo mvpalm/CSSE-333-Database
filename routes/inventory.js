@@ -6,7 +6,7 @@ let router = express.Router();
 router.post('/add', (req, res) => {
     console.log(req.body);
     const { name, price, description, qty } = req.body;
-    let query = mysql.format("INSERT INTO Items set ?", { name, description, price, qty });
+    let query = mysql.format("INSERT INTO Item set ?", { name, description, price, qty });
     db.query(query, (err, result, fields) => {
         if (err) {
             res.status(500).json({ error: err })
