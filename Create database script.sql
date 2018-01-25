@@ -60,7 +60,7 @@ create table Item_Receipt (
 	receiptid int,
     itemid int,
     primary key(receiptid, itemid),
-    foreign key(receiptid) references Ritemeceipt(receiptid),
+    foreign key(receiptid) references Receipt(receiptid),
     foreign key(itemid) references Item(id),
     qty int unsigned
 );
