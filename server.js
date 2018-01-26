@@ -4,14 +4,14 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
-var inventory = require('./routes/inventory');
+var items = require('./routes/items');
 
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 
-app.use('/api/inventory', inventory);
+app.use('/api/item', items);
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/client/index.html'));
