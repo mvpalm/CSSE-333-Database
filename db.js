@@ -6,7 +6,7 @@ let connect = {
         password: "",
         database: "Project"
 };
-let name = "";
+let name = "localdb";
 
 var connection = mysql.createConnection({
   ...connect,

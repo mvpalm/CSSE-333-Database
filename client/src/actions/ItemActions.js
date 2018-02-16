@@ -56,3 +56,4 @@ export function updateInventory(data) {
         return axios.post('/api/item/updateInventory', data);
     }
 }
+
